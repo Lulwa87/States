@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+	<form method='POST' action='/city_edit/{{ city.pk }}/'>
+		{% csrf_token %}
+
+		{{ form.as_p}}
+
+		<import type='submit' value='Save'>
+
+	</form>
+
+{% endblock %}
